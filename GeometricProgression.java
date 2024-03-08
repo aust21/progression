@@ -1,4 +1,4 @@
-public GeometricProgression extends Progression {
+public class GeometricProgression extends Progression {
 	protected long base;
 
 	public GeometricProgression() {
