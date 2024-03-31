@@ -6,8 +6,23 @@ public class Main {
 
 		String typeOfProgression = inputReader();
 		Progression prog;
-		prog = new FibonacciProgression(0, 1);
-		prog.printProgression(10);
+		switch (typeOfProgression) {
+			case "arithmetic":
+				prog = new ArithmeticProgression(2, 1);
+				prog.printProgression(10);
+				break;
+			case "fibonacci":
+				prog = new FibonacciProgression(0, 1);
+				prog.printProgression(10);
+				break;
+			case "geometric":
+				prog = new GeometricProgression(0, 1);
+				prog.printProgression(10);
+				break;
+			default:
+				System.out.println("Please choose arithmetic, fibonacci or geometric");
+		}
+		
 	}
 
 	public static String inputReader() {
